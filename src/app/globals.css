@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-cream: #fdfbf7;
+  --text-charcoal: #141311;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-cream);
+  color: var(--text-charcoal);
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+}
+
+/* Custom subtle gold scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #faf5eb;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d4af37;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a67c1e;
+}
