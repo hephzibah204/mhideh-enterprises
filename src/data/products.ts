@@ -16,8 +16,6 @@ export interface Product {
   price: number;
   originalPrice?: number;
   badge?: string;
-  rating: number;
-  reviewsCount: number;
   shortDescription: string;
   customizationPrompt: string;
   options?: string[];
@@ -51,8 +49,6 @@ export const PRODUCTS: Product[] = [
     price: 19500,
     originalPrice: 24000,
     badge: "Bestseller Sleepwear",
-    rating: 4.9,
-    reviewsCount: 89,
     shortDescription:
       "Butter-soft satin pyjama set tailored with contrast piping and custom monogrammed initials or name on the breast pocket. Breathable, luxury sleepwear.",
     customizationPrompt: "Name/initials for pocket embroidery & color (Blush Pink, Champagne, Burgundy, Navy, Black)",
@@ -69,8 +65,6 @@ export const PRODUCTS: Product[] = [
     price: 16000,
     originalPrice: 19500,
     badge: "Bridal Shower Favorite",
-    rating: 4.9,
-    reviewsCount: 74,
     shortDescription:
       "Silky-smooth satin kimono night robe personalized with glistening metallic gold calligraphy across the back (e.g., Bride, Mrs. Adeleke, Birthday Queen).",
     customizationPrompt: "Title or name to print on back & robe color preference",
@@ -87,8 +81,6 @@ export const PRODUCTS: Product[] = [
     price: 22500,
     originalPrice: 27000,
     badge: "Couple Special",
-    rating: 4.8,
-    reviewsCount: 51,
     shortDescription:
       "Matching 100% organic cotton lounge pants and soft graphic night shirts with his & hers custom nicknames or romantic anniversary date.",
     customizationPrompt: "Couple names/dates and sizes for both (His & Hers)",
@@ -106,8 +98,6 @@ export const PRODUCTS: Product[] = [
     price: 18500,
     originalPrice: 22000,
     badge: "Official Catalog",
-    rating: 5.0,
-    reviewsCount: 148,
     shortDescription:
       "Signature tailored bodycon peplum midi dress featuring elegant cowl neck drapery, floral shoulder corsage, and structured puff sleeves. Available in Bottle Green and Burgundy Red.",
     customizationPrompt: "Choose color (Bottle Green or Burgundy Wine) & size (UK 8 to 20)",
@@ -123,8 +113,6 @@ export const PRODUCTS: Product[] = [
     price: 26000,
     originalPrice: 31000,
     badge: "Trending Chic",
-    rating: 5.0,
-    reviewsCount: 46,
     shortDescription:
       "Heavyweight brushed-fleece cropped hoodie and tailored high-waist sweatpants customized with subtle chest embroidery or aesthetic sleeve text.",
     customizationPrompt: "Initials or custom text, size & color (Mocha, Blush, Cream, Charcoal)",
@@ -140,8 +128,6 @@ export const PRODUCTS: Product[] = [
     price: 32000,
     originalPrice: 38000,
     badge: "Statement Wear",
-    rating: 4.9,
-    reviewsCount: 38,
     shortDescription:
       "Vintage-wash denim jacket custom-embroidered with pearl accents and your custom surname or bridal title across the back shoulders.",
     customizationPrompt: "Text / surname to embroider (e.g., 'Mrs. Adebayo') & jacket wash",
@@ -160,8 +146,6 @@ export const PRODUCTS: Product[] = [
     price: 35000,
     originalPrice: 42000,
     badge: "Gentleman's Choice",
-    rating: 5.0,
-    reviewsCount: 67,
     shortDescription:
       "Tailored premium wool-cashmere blend Senator set with precision gold-thread embroidery on the chest pocket and bespoke neck styling.",
     customizationPrompt: "Monogram initials, pocket design & color (Navy, Wine, Black, White, Emerald)",
@@ -178,8 +162,6 @@ export const PRODUCTS: Product[] = [
     price: 12500,
     originalPrice: 15000,
     badge: "Streetwear Essential",
-    rating: 4.9,
-    reviewsCount: 104,
     shortDescription:
       "240 GSM heavy cotton oversized t-shirt with high-density puff print, custom photography, or typography that won't fade or crack.",
     customizationPrompt: "Graphic design / text idea, shirt size & base color",
@@ -196,8 +178,6 @@ export const PRODUCTS: Product[] = [
     price: 24000,
     originalPrice: 28500,
     badge: "Customer Favorite",
-    rating: 4.9,
-    reviewsCount: 82,
     shortDescription:
       "Thick fleece pullover hoodie featuring custom chest embroidery, roman numeral anniversary dates on the wrist, and double-lined hood.",
     customizationPrompt: "Embroidery text/initials, date & hoodie color (Black, Burgundy, Grey, Forest Green)",
@@ -213,8 +193,6 @@ export const PRODUCTS: Product[] = [
     price: 8500,
     originalPrice: 11000,
     badge: "Popular Accessory",
-    rating: 4.8,
-    reviewsCount: 57,
     shortDescription:
       "Structured 6-panel cap with high-definition 3D puff embroidery or laser-engraved leather emblem. Perfect for daily style and gifts.",
     customizationPrompt: "Initials or word to embroider & cap color",
@@ -232,8 +210,6 @@ export const PRODUCTS: Product[] = [
     price: 18500,
     originalPrice: 22000,
     badge: "Bestseller",
-    rating: 4.9,
-    reviewsCount: 84,
     shortDescription:
       "Museum-grade laminated photo print mounted in a handcrafted brushed-gold & charcoal frame. Perfect for portraits, weddings, and milestone anniversaries.",
     customizationPrompt: "Preferred size & caption text (you'll send photo on WhatsApp)",
@@ -250,8 +226,6 @@ export const PRODUCTS: Product[] = [
     price: 16000,
     originalPrice: 19500,
     badge: "Popular Gift",
-    rating: 4.8,
-    reviewsCount: 52,
     shortDescription:
       "Silent-sweep quartz timepiece crafted with high-gloss acrylic, custom family or couple photography, and metallic gold Roman numerals.",
     customizationPrompt: "Name/message on clock face & shape preference",
@@ -265,8 +239,6 @@ export const PRODUCTS: Product[] = [
     name: "Multi-Piece Gallery Memory Collage",
     category: "Custom Frames & Wall Clocks",
     price: 34000,
-    rating: 5.0,
-    reviewsCount: 39,
     shortDescription:
       "Curated set of 5 coordinated wall frames designed to tell your story across living rooms, offices, or hallways.",
     customizationPrompt: "Frame finish (Gold, Black, White, or Wood)",
@@ -282,8 +254,6 @@ export const PRODUCTS: Product[] = [
     price: 9500,
     originalPrice: 12000,
     badge: "Customer Favorite",
-    rating: 4.9,
-    reviewsCount: 96,
     shortDescription:
       "Ultra-plush hypoallergenic throw pillow with vibrant double-sided sublimation print or gold-style monogramming.",
     customizationPrompt: "Name/message to print & color theme",
@@ -300,8 +270,6 @@ export const PRODUCTS: Product[] = [
     price: 28500,
     originalPrice: 33000,
     badge: "Wedding & Bridal",
-    rating: 4.9,
-    reviewsCount: 47,
     shortDescription:
       "100% Egyptian cotton bath sheet and plush robe custom-embroidered with golden thread initials, names, or couple titles.",
     customizationPrompt: "Exact name/initials for gold embroidery",
@@ -317,8 +285,6 @@ export const PRODUCTS: Product[] = [
     price: 17500,
     originalPrice: 21000,
     badge: "Executive Choice",
-    rating: 5.0,
-    reviewsCount: 68,
     shortDescription:
       "18K gold-plated stainless steel cufflinks and matching tie bar laser-engraved with custom initials, dates, or crest in a velvet presentation box.",
     customizationPrompt: "Initials or short date to engrave (e.g., T.A. | 10.10.26)",
@@ -335,8 +301,6 @@ export const PRODUCTS: Product[] = [
     price: 42000,
     originalPrice: 48000,
     badge: "Luxury Box",
-    rating: 4.9,
-    reviewsCount: 41,
     shortDescription:
       "All-in-one curated gift box featuring a personalized leather journal, engraved metal pen, insulated temperature flask, and custom keychain.",
     customizationPrompt: "Recipient full name & box ribbon color",
@@ -352,8 +316,6 @@ export const PRODUCTS: Product[] = [
     price: 6500,
     originalPrice: 8000,
     badge: "Top Seller",
-    rating: 4.8,
-    reviewsCount: 129,
     shortDescription:
       "Matte black ceramic mug that magically reveals your hidden photos and heartfelt message when hot coffee or tea is poured inside.",
     customizationPrompt: "Quote/text to pair with your picture",
@@ -368,8 +330,6 @@ export const PRODUCTS: Product[] = [
     name: "Custom Die-Cut Souvenir & Brand Stickers (Pack of 50)",
     category: "Picture / Magic Mugs & Stickers",
     price: 8500,
-    rating: 4.8,
-    reviewsCount: 34,
     shortDescription:
       "Waterproof, scratch-resistant vinyl stickers with metallic gold foil or full-color finish for wedding souvenirs, product packaging, and party favors.",
     customizationPrompt: "Event title / brand name & preferred shape",
@@ -385,8 +345,6 @@ export const PRODUCTS: Product[] = [
     price: 25000,
     originalPrice: 29500,
     badge: "Event Essential",
-    rating: 4.9,
-    reviewsCount: 58,
     shortDescription:
       "High-definition large-format flex banner or retractable aluminum stand banner designed and printed for birthdays, bridal showers, and corporate launches.",
     customizationPrompt: "Event type, celebrant name, color palette & dimensions",
@@ -404,8 +362,6 @@ export const PRODUCTS: Product[] = [
     name: "Frosted Acrylic & Gold Mirror Welcome Sign",
     category: "Banners & Event Prints",
     price: 32000,
-    rating: 5.0,
-    reviewsCount: 27,
     shortDescription:
       "Statement entrance signage with raised gold calligraphy lettering for weddings, milestone birthdays, and luxury receptions.",
     customizationPrompt: "Event title, date, and welcome wording",

@@ -6,7 +6,6 @@ import {
   Sparkles,
   MessageCircle,
   Search,
-  Star,
   Truck,
   ShieldCheck,
   Clock,
@@ -50,15 +49,7 @@ export default function MhidehStorefront() {
   const [sortBy, setSortBy] = useState<"featured" | "price-asc" | "price-desc">("featured");
 
   // Cart & Drawer state
-  const [cart, setCart] = useState<CartItem[]>([
-    {
-      cartItemId: "initial-sample-1",
-      product: PRODUCTS[0],
-      selectedOption: PRODUCTS[0].options?.[0] || "Standard",
-      customNote: "Gold frame with 'Happy Anniversary' engraving plate",
-      quantity: 1,
-    },
-  ]);
+  const [cart, setCart] = useState<CartItem[]>([]);
   const [isCartOpen, setIsCartOpen] = useState(false);
 
   // Product Customization Modal state
@@ -545,17 +536,15 @@ export default function MhidehStorefront() {
 
                   <div className="space-y-4 pt-6">
                     <div className="rounded-2xl bg-burgundy-700 text-cream-50 p-4 border border-gold-400/30 shadow-luxury">
-                      <div className="flex items-center gap-1 text-gold-300 mb-1">
-                        {[...Array(5)].map((_, i) => (
-                          <Star key={i} className="w-3.5 h-3.5 fill-current" />
-                        ))}
+                      <div className="flex items-center gap-1.5 text-gold-300 mb-1.5">
+                        <CheckCircle2 className="w-4 h-4 text-gold-400" />
+                        <span className="text-xs font-bold uppercase tracking-wider">Photo Preview Approval</span>
                       </div>
                       <p className="text-xs text-cream-100 leading-relaxed">
-                        &ldquo;Ordered a custom portrait frame, throw pillow, and magic mug
-                        for my husband&apos;s birthday. Delivered right on time in Ibadan!&rdquo;
+                        Every customized piece is shared with you on WhatsApp for approval before final production and framing.
                       </p>
                       <p className="text-[11px] font-semibold text-gold-300 mt-2">
-                        —Verified WhatsApp Client
+                        Studio in Ringroad, Ibadan • Nationwide Delivery
                       </p>
                     </div>
 
@@ -819,12 +808,9 @@ export default function MhidehStorefront() {
                         <span className="font-semibold text-burgundy-600 uppercase tracking-wider text-[11px]">
                           {product.category}
                         </span>
-                        <span className="inline-flex items-center gap-1 font-medium text-charcoal-900">
-                          <Star className="w-3.5 h-3.5 fill-gold-400 text-gold-400" />
-                          {product.rating.toFixed(1)}{" "}
-                          <span className="text-charcoal-800/50">
-                            ({product.reviewsCount})
-                          </span>
+                        <span className="inline-flex items-center gap-1 text-[11px] font-semibold text-gold-700 bg-gold-400/20 px-2 py-0.5 rounded-full border border-gold-400/30">
+                          <Sparkles className="w-3 h-3 text-gold-600" />
+                          Custom Order
                         </span>
                       </div>
 
@@ -1479,7 +1465,7 @@ export default function MhidehStorefront() {
                         type="text"
                         value={customerName}
                         onChange={(e) => setCustomerName(e.target.value)}
-                        placeholder="e.g., Adeola Ogunleye"
+                        placeholder="Your full name"
                         className="w-full rounded-xl border border-cream-300 bg-cream-50 px-3 py-2 text-xs text-charcoal-900 focus:outline-none focus:border-gold-500"
                       />
                     </div>
@@ -1517,13 +1503,13 @@ export default function MhidehStorefront() {
                     {deliveryMethod === "delivery" && (
                       <div>
                         <label className="block text-xs font-medium text-charcoal-800 mb-1">
-                          City / State (Nigeria)
+                          Delivery City &amp; Address
                         </label>
                         <input
                           type="text"
                           value={customerLocation}
                           onChange={(e) => setCustomerLocation(e.target.value)}
-                          placeholder="e.g., Ringroad Ibadan / Lekki Lagos / Abuja"
+                          placeholder="Your city & delivery address"
                           className="w-full rounded-xl border border-cream-300 bg-cream-50 px-3 py-2 text-xs text-charcoal-900 focus:outline-none focus:border-gold-500"
                         />
                       </div>
